@@ -15,4 +15,8 @@ contract MessageBoard {
         messages.push(message);
         emit NewMessage(msg.sender, message);
     }
+
+    function getMessagesCount() public view returns (uint256) {
+        return messages.length;
+    }
 }
