@@ -17,6 +17,10 @@ contract CoinFlip {
     );
 
     function flipCoin(CoinSide choosenSide) public {
-        uint256 randomNumber = uint256(keccak256(abi.encodePacked(block.timestamp, msg.sender))) % 2;
+        uint256 randomNumber = uint256(
+            keccak256(abi.encodePacked(block.timestamp, msg.sender))
+        ) % 2;
+
+        CoinSide result = CoinSide(randomNumber);
     }
 }
