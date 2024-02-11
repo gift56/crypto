@@ -8,6 +8,6 @@ contract TipJar {
     event TipWithdrawn(address indexed owner, uint256 amount);
 
     constructor() {
-        
+        owner = msg.sender;
     }
 }
