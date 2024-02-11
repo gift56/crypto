@@ -10,6 +10,7 @@ contract ProfileStatus {
     mapping(address => Status) public userStatus;
 
     event StatusCreated(address indexed wallet, string status);
+    event StatusUpdated(address indexed wallet, string newStatus);
 
     constructor() {}
 }
