@@ -22,6 +22,7 @@ contract TipJar {
     }
 
     function withdrawTips() public onlyOwner{
-        uint256 balance = address(this).balance;
+        uint256 contractBalance = address(this).balance;
+
     }
 }
