@@ -26,5 +26,7 @@ contract TipJar {
         require(contractBalance > 0, "No tips to be withdrawn");
 
         payable(owner).transfer(contractBalance);
+
+        emit TipWithdrawn(owner, contractBalance);
     }
 }
