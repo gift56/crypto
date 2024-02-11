@@ -25,6 +25,6 @@ contract TipJar {
         uint256 contractBalance = address(this).balance;
         require(contractBalance > 0, "No tips to be withdrawn");
 
-        payable(owner).transfer(contractBalance)
+        payable(owner).transfer(contractBalance);
     }
 }
