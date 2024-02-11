@@ -12,7 +12,7 @@ contract TipJar {
     }
 
     modifier onlyOwner() {
-        require(msg.sender === owner, "Only the owner can call this function");
+        require(msg.sender == owner, "Only the owner can call this function");
         _;
     }
 
