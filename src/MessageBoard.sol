@@ -22,5 +22,6 @@ contract MessageBoard {
 
     function getMessage(uint256 index) public view returns (string memory) {
         require(index < messages.length, "No Messages Found!");
+        return messages[index];
     }
 }
