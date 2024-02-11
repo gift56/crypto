@@ -13,6 +13,6 @@ contract ProfileStatus {
     event StatusUpdated(address indexed wallet, string newStatus);
 
     function createStatus(string memory initialStatus) public {
-        
+        require(!userStatus[msg.sender])
     }
 }
