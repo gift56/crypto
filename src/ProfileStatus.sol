@@ -19,7 +19,9 @@ contract ProfileStatus {
             statusMessage: initialStatus,
             exists: true
         });
-        
+
         emit StatusCreated(msg.sender, initialStatus);
     }
+
+    function updateStatus(string memory newStatus)
 }
