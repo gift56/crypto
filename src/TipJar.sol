@@ -7,4 +7,7 @@ contract TipJar {
     event TipReceived(address indexed tipper, uint256 amount);
     event TipWithdrawn(address indexed owner, uint256 amount);
 
+    constructor() {
+        
+    }
 }
