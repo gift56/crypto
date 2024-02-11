@@ -12,6 +12,6 @@ contract MessageBoard {
     }
 
     function postMessage(string memory message) public {
-        
+        messages.push(message);
     }
 }
