@@ -23,5 +23,5 @@ contract ProfileStatus {
         emit StatusCreated(msg.sender, initialStatus);
     }
 
-    function updateStatus(string memory newStatus)
+    function updateStatus(string memory newStatus) public 
 }
