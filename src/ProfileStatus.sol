@@ -12,5 +12,7 @@ contract ProfileStatus {
     event StatusCreated(address indexed wallet, string status);
     event StatusUpdated(address indexed wallet, string newStatus);
 
-    constructor() {}
+    function createStatus(string memory initialStatus) public {
+        
+    }
 }
