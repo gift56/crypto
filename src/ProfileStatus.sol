@@ -14,6 +14,10 @@ contract ProfileStatus {
 
     function createStatus(string memory initialStatus) public {
         require(!userStatus[msg.sender].exists, "Status Already exist");
-        
+
+        userStatus[msg.sender] = {
+            statusMessage: initialStatus,
+            exists: true
+        }
     }
 }
