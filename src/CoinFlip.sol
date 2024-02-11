@@ -23,8 +23,8 @@ contract CoinFlip {
 
         CoinSide result = CoinSide(randomNumber);
 
-        FlipResult flipResult = (choosenSide == result) ? FlipResult.WIN : FlipResult.LOSE
+        FlipResult flipResult = (choosenSide == result) ? FlipResult.WIN : FlipResult.LOSE;
 
-        emit Result(msg.sender,  choosenSide, flipResult)
+        emit Result(msg.sender,  choosenSide, flipResult);
     }
 }
