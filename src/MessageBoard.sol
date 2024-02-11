@@ -19,4 +19,8 @@ contract MessageBoard {
     function getMessagesCount() public view returns (uint256) {
         return messages.length;
     }
+
+    function getMessage(uint256 index) public view returns (string memory) {
+        require(index < messages.length, "No Messages Found!");
+    }
 }
