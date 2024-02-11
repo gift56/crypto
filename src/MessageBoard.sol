@@ -10,4 +10,8 @@ contract MessageBoard {
     constructor() {
         owner = msg.sender;
     }
+
+    function postMessage(string memory message) public {
+        
+    }
 }
