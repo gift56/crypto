@@ -21,5 +21,7 @@ contract TipJar {
         emit TipReceived(msg.sender, msg.value)
     }
 
-    function withdrawTips() public onlyOwner
+    function withdrawTips() public onlyOwner{
+        
+    }
 }
