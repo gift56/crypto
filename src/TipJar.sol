@@ -4,5 +4,6 @@ pragma solidity ^0.8.13;
 contract TipJar {
     address public owner;
 
+    event TipReceived(address indexed tipper, uint256 amount);
     
 }
