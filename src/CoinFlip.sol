@@ -22,5 +22,7 @@ contract CoinFlip {
         ) % 2;
 
         CoinSide result = CoinSide(randomNumber);
+
+        FlipResult flipResult = (choosenSide == result) ? FlipResult.WIN : FlipResult.LOSE
     }
 }
