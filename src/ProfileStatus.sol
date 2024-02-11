@@ -23,5 +23,8 @@ contract ProfileStatus {
         emit StatusCreated(msg.sender, initialStatus);
     }
 
-    function updateStatus(string memory newStatus) public 
+    function updateStatus(string memory newStatus) public {
+         require(!userStatus[msg.sender].exists, "Status does not exist"); 
+         
+    }
 }
