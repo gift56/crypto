@@ -23,6 +23,6 @@ contract TipJar {
 
     function withdrawTips() public onlyOwner{
         uint256 contractBalance = address(this).balance;
-
+        require(contractBalance > 0, "No tips to be withdrawn");
     }
 }
