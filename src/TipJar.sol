@@ -5,5 +5,6 @@ contract TipJar {
     address public owner;
 
     event TipReceived(address indexed tipper, uint256 amount);
-    
+    event TipWithdrawn(address indexed owner, uint256 amount);
+
 }
