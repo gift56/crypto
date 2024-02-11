@@ -18,7 +18,7 @@ contract TipJar {
 
     function tip() public payable {
         require(msg.value > 0, "You must send a tip to use this function");
-        emit TipReceived(msg.sender, msg.value)
+        emit TipReceived(msg.sender, msg.value);
     }
 
     function withdrawTips() public onlyOwner{
