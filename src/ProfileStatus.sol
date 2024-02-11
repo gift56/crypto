@@ -5,6 +5,7 @@ contract ProfileStatus {
     struct Status {
         string statusMessage;
         bool exists;
+        
     }
 
     constructor() {}
