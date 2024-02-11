@@ -5,8 +5,9 @@ contract ProfileStatus {
     struct Status {
         string statusMessage;
         bool exists;
-        
     }
+
+    mapping(address => Status) public userStatus;
 
     constructor() {}
 }
