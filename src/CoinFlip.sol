@@ -10,5 +10,13 @@ contract CoinFlip {
         WIN,
         LOSE
     }
-    event Result();
+    event Result(
+        address indexed player,
+        CoinSide choosenSide,
+        FlipResult result
+    );
+
+    function flipCoin(CoinSide choosenSide) public {
+        uint256 randomNumber = uint256(keccak256(abi.encodePacked(block.timestamp,msg.sender))) % 2;
+    }
 }
