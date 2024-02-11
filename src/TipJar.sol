@@ -29,4 +29,8 @@ contract TipJar {
 
         emit TipWithdrawn(owner, contractBalance);
     }
+
+    function getBalance() public view returns (uint256){
+        return address(this).balance;
+    }
 }
