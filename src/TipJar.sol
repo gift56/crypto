@@ -10,4 +10,13 @@ contract TipJar {
     constructor() {
         owner = msg.sender;
     }
+
+    modifier onlyOwner() {
+        require(msg.sender === owner, "Only the owner can call this function");
+        _;
+    }
+
+    function tip() public payable {
+        require(msg.value > 0, "You must send a tip to use this function")
+    }
 }
