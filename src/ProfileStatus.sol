@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import "@thirdweb-dev/contracts/extension/ContractMetadata.sol";
 
 
-contract ProfileStatus {
+contract ProfileStatus is ContractMetadata {
     struct Status {
         string statusMessage;
         bool exists;
