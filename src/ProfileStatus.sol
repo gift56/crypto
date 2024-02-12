@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 import "@thirdweb-dev/contracts/extension/ContractMetadata.sol";
 
-contract ProfileStatus {
+contract ProfileStatus is ContractMetadata {
     address public owner;
 
     struct Status {
@@ -43,5 +43,15 @@ contract ProfileStatus {
         require(userStatus[wallet].exists, "Status Wallet does not exist");
 
         return userStatus[wallet].statusMessage;
+    }
+
+    function _canSetContractURI()
+        internal
+        view
+        virtual
+        override
+        returns (bool)
+    {
+        return msg.sender == owner;
     }
 }
