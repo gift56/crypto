@@ -6,13 +6,13 @@ import "@thirdweb-dev/contracts/extension/ContractMetadata.sol";
 contract ProfileStatus is ContractMetadata {
     address public owner;
 
+    constructor() {
+        owner = msg.sender;
+    }
+
     struct Status {
         string statusMessage;
         bool exists;
-    }
-
-    constructor() {
-        owner = msg.sender;
     }
 
     mapping(address => Status) public userStatus;
