@@ -4,9 +4,15 @@ pragma solidity ^0.8.13;
 import "@thirdweb-dev/contracts/extension/ContractMetadata.sol";
 
 contract ProfileStatus {
+    address public owner;
+
     struct Status {
         string statusMessage;
         bool exists;
+    }
+
+    constructor() {
+        owner = msg.sender;
     }
 
     mapping(address => Status) public userStatus;
