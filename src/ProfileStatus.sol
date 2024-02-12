@@ -30,4 +30,8 @@ contract ProfileStatus {
 
         emit StatusUpdated(msg.sender, newStatus);
     }
+    function getStatus(address wallet) public view  returns (string memory) {
+        require(userStatus[wallet].exists, "Status Wallet does not exist");
+
+    }
 }
