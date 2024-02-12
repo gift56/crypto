@@ -24,7 +24,7 @@ contract ProfileStatus {
     }
 
     function updateStatus(string memory newStatus) public {
-        require(!userStatus[msg.sender].exists, "Status does not exist");
+        require(userStatus[msg.sender].exists, "Status does not exist");
 
         userStatus[msg.sender].statusMessage = newStatus;
 
